@@ -31,7 +31,6 @@ resource "google_compute_address" "external" {
 }
 
 resource "google_compute_address" "internal" {
-  provider     = google-beta
   for_each     = var.internal_addresses
   project      = var.project_id
   name         = each.key
